@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice AI Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>リアルタイム音声対話AIアシスタント</h1>
+        <div style="text-align: center; margin: 10px 0;">
+            <p>🎤 音声モード | <a href="/text-mode.html" style="color: #3498db;">📝 テキストモードに切り替え</a></p>
+        </div>
+        
+        <div class="status-panel">
+            <div class="status-item">
+                <span class="status-label">接続状態:</span>
+                <span id="connectionStatus" class="status-value">未接続</span>
+            </div>
+            <div class="status-item">
+                <span class="status-label">録音状態:</span>
+                <span id="recordingStatus" class="status-value">停止中</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="startBtn" class="btn btn-primary">対話開始</button>
+            <button id="stopBtn" class="btn btn-danger" disabled>対話終了</button>
+        </div>
+
+        <div class="conversation-log">
+            <h2>会話履歴</h2>
+            <div id="conversationHistory"></div>
+        </div>
+    </div>
+
+    <script src="client.js"></script>
+</body>
+</html>
