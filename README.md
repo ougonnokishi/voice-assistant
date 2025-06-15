@@ -2,6 +2,10 @@
 
 マルチLLM（Claude + OpenAI）を使用したリアルタイム音声対話アシスタントのプロトタイプ実装です。
 
+[![Run on Replit](https://replit.com/badge/github/ougonnokishi/voice-assistant)](https://replit.com/new/github/ougonnokishi/voice-assistant)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/deploy?template=https://github.com/ougonnokishi/voice-assistant)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/ougonnokishi/voice-assistant)
+
 ## 特徴
 
 - 🎤 **音声モード**: リアルタイム音声認識と音声合成（Google Cloud使用）
