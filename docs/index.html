@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice AI Assistant - Demo</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .hero {
+            text-align: center;
+            padding: 40px 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .btn-primary {
+            background-color: #3498db;
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #2980b9;
+        }
+        .btn-secondary {
+            background-color: #95a5a6;
+            color: white;
+        }
+        .btn-secondary:hover {
+            background-color: #7f8c8d;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .feature {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .feature h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .setup {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 30px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        .demo-note {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>🤖 リアルタイム音声対話AIアシスタント</h1>
+        <p class="subtitle">Claude + OpenAI を活用したマルチLLM音声アシスタント</p>
+        
+        <div class="buttons">
+            <a href="https://github.com/ougonnokishi/voice-assistant" class="btn btn-primary">
+                📦 GitHub で見る
+            </a>
+            <a href="https://github.com/ougonnokishi/voice-assistant/archive/refs/heads/main.zip" class="btn btn-secondary">
+                ⬇️ ダウンロード
+            </a>
+        </div>
+    </div>
+
+    <div class="demo-note">
+        <strong>📌 デモについて:</strong> このアプリケーションはバックエンドサーバーが必要なため、
+        ローカル環境でのセットアップが必要です。以下の手順に従ってください。
+    </div>
+
+    <div class="features">
+        <div class="feature">
+            <h3>🎤 音声モード</h3>
+            <p>Google Cloud Speech-to-Text/Text-to-Speechを使用したリアルタイム音声対話</p>
+        </div>
+        <div class="feature">
+            <h3>📝 テキストモード</h3>
+            <p>ブラウザベースのチャットインターフェースでAIと対話</p>
+        </div>
+        <div class="feature">
+            <h3>⚡ マルチLLM</h3>
+            <p>Claude APIとOpenAI APIを並列実行し、最速応答を採用</p>
+        </div>
+        <div class="feature">
+            <h3>🛡️ 高信頼性</h3>
+            <p>片方のAPIがエラーでも自動フォールバックで継続動作</p>
+        </div>
+    </div>
+
+    <div class="setup">
+        <h2>🚀 クイックスタート</h2>
+        <ol>
+            <li>
+                <strong>リポジトリをクローン:</strong>
+                <br><code>git clone https://github.com/ougonnokishi/voice-assistant.git</code>
+            </li>
+            <li>
+                <strong>依存関係をインストール:</strong>
+                <br><code>cd voice-assistant && npm install</code>
+            </li>
+            <li>
+                <strong>環境変数を設定:</strong>
+                <br><code>cp .env.example .env</code>
+                <br>（APIキーを設定）
+            </li>
+            <li>
+                <strong>サーバーを起動:</strong>
+                <br><code>npm start</code>
+            </li>
+            <li>
+                <strong>ブラウザでアクセス:</strong>
+                <br>テキストモード: <code>http://localhost:3000/text-mode.html</code>
+                <br>音声モード: <code>http://localhost:3000</code>
+            </li>
+        </ol>
+
+        <h3>必要なAPIキー</h3>
+        <ul>
+            <li><strong>ANTHROPIC_API_KEY</strong> - <a href="https://console.anthropic.com/">Anthropic Console</a></li>
+            <li><strong>OPENAI_API_KEY</strong> - <a href="https://platform.openai.com/">OpenAI Platform</a></li>
+            <li><strong>Google Cloud認証</strong> - 音声機能用（オプション）</li>
+        </ul>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px; color: #666;">
+        <p>Created with ❤️ by ougonnokishi</p>
+    </div>
+</body>
+</html>
