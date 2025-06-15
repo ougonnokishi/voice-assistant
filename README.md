@@ -22,7 +22,7 @@
 
 ### 1. リポジトリのクローン
 ```bash
-git clone https://github.com/yourusername/voice-assistant.git
+git clone https://github.com/ougonnokishi/voice-assistant.git
 cd voice-assistant
 ```
 
